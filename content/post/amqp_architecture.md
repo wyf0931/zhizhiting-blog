@@ -34,10 +34,9 @@ AMQP 1.0 版本的类型系统和消息编码工具为消息提供可移植的�
 ### 代理服务
 消息代理的主要任务是处理消息排队、路由和传递的复杂性。AMQP 定义了消息代理的最小需求集，目标是使应用程序能够通过代理服务发送消息。
 
-{%note info%}
-名词解释：
-* AMQP：Advanced Message Queuing Protocol
-* OASIS：Organization for the Advancement of Structured Information Standards
-{%endnote%}
+> 名词解释：
+> 
+> * AMQP：Advanced Message Queuing Protocol
+> * OASIS：Organization for the Advancement of Structured Information Standards
 
 > 原文地址：https://www.amqp.org/product/architecture

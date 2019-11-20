@@ -28,9 +28,9 @@ AMQP 采用了 TCP/IP 进行传输，提供可靠的连接；
 可以利用 SOAP 提供预期的消息交换模式；  
 可以利用 Web Service 标准提供业务契约表示。
 
-{%note%}
-名词解释：
-1. SOA ：Service Oriented Architecture，面向服务的架构
-2. Expected Message Exchange Patterns ：预期的消息交换模式
-3. SOAP ：Simple Object Access Protocol，简单对象访问协议
-{%endnote%}
+> 
+> 名词解释：
+> 
+> 1. SOA ：Service Oriented Architecture，面向服务的架构
+> 2. Expected Message Exchange Patterns ：预期的消息交换模式
+> 3. SOAP ：Simple Object Access Protocol，简单对象访问协议
