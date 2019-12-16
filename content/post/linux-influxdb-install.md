@@ -15,6 +15,7 @@ InfluxDB 软件包的安装可能需要 `root` 或管理员权限才能顺利完
 
 ### 网络端口
 InfluxDB 默认使用以下网络端口：
+
 * TCP 端口 `8086` 用于通过 InfluxDB 的 HTTP API 进行客户端 - 服务器(C/S)通信；
 * TCP 端口 `8088` 用于 RPC 服务进行备份和还原。
 除了上面的端口，InfluxDB 还提供了多个可能需要[自定义端口](https://www.docs.influxdata.com/influxdb/v1.7/administration/ports/)的插件。可以通过[配置文件](https://www.docs.influxdata.com/influxdb/v1.7/administration/config)修改所有端口映射，该文件默认安装位于`/etc/influxdb/influxdb.conf`。
@@ -69,14 +70,10 @@ influxd
 ### 数据与 WAL 目录权限
 确保存储数据和 [write ahead log](https://www.docs.influxdata.com/influxdb/v1.7/concepts/glossary#wal-write-ahead-log) (WAL) 的目录对于运行 `influxd ` 服务的用户是可写的。
 
-{%note warning%}
-如果数据和WAL目录不可写，则 `influxd ` 服务会启动失败。
-{%endnote%}
+> 如果数据和WAL目录不可写，则 `influxd ` 服务会启动失败。
 
 有关 `data` 和 `wal` 目录路径的信息，请参阅 InfluxDB [配置文档](https://www.docs.influxdata.com/influxdb/v1.7/administration/config/)的[数据设置](https://www.docs.influxdata.com/influxdb/v1.7/administration/config/#data-settings)部分。
 
-{%note%}
-官网地址：https://www.docs.influxdata.com/influxdb/v1.7/introduction/installation/
-{%endnote%}
+> 官网地址：https://www.docs.influxdata.com/influxdb/v1.7/introduction/installation/ 
 
 关于安装 RPM 软件包的问题，请参考[下载页面](https://influxdata.com/downloads/)。

@@ -20,6 +20,4 @@ date: 2019-07-03 14:32:00
 * 可以在不牺牲 读/写 性能的情况下使用 InnoDB 表或页 [压缩](https://dev.mysql.com/doc/refman/5.7/en/glossary.html#glos_compression) 功能；
 * 推荐在启动应用服务时加上参数 [`--sql_mode=NO_ENGINE_SUBSTITUTION`](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_mode) 。可以防止因 [`CREATE TABLE`](https://dev.mysql.com/doc/refman/5.7/en/create-table.html "13.1.18 CREATE TABLE Syntax") 语句带 `ENGINE=` 所导致的将表建在不同引擎上的问题。
 
-{%note%}
-原文地址：https://dev.mysql.com/doc/refman/5.7/en/innodb-best-practices.html
-{%endnote%}
+> 原文地址：https://dev.mysql.com/doc/refman/5.7/en/innodb-best-practices.html
