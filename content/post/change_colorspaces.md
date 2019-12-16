@@ -18,9 +18,9 @@ import cv2 as cv
 flags = [i for i in dir(cv) if i.startswith('COLOR_')]
 print(flags)
 ```
-{%note info%}
-对于 HSV 来说，Hue 的范围是 `[0,179]`, Saturation 的范围是 `[0,255]`，Value 的范围是 `[0,255]`。 不同的软件使用不同的比例，因此，如果将 OpenCV 值与它们进行比较，则需要对这些范围进行 normalize 操作。
-{%endnote%}
+
+
+> 对于 HSV 来说，Hue 的范围是 `[0,179]`, Saturation 的范围是 `[0,255]`，Value 的范围是 `[0,255]`。 不同的软件使用不同的比例，因此，如果将 OpenCV 值与它们进行比较，则需要对这些范围进行 normalize 操作。
 
 ### 物体追踪
 
@@ -58,9 +58,7 @@ cv.destroyAllWindows()
 
 ![追踪到的蓝色物体](/images/pasted-17.png)
 
-{%note%}
-图像中有一些噪点，我们在以后的章节会介绍如何去除这些噪点。
-{%endnote%}
+> 图像中有一些噪点，我们在以后的章节会介绍如何去除这些噪点。
 
 ### 如何找到要跟踪的 HSV 值？
 这是 `stackoverflow.com` 中常见的问题，方法很简单，使用 `cv.cvtcolor()` 函数，参数传入 `BGR` 值，不要传图像。比如，要查找绿色的 `hsv`，Python 代码如下：
@@ -78,5 +76,7 @@ print(hsv_green)
 * [`cv.cvtColor(src, code[, dst[, dstCn]])`](https://docs.opencv.org/3.4.5/d8/d01/group__imgproc__color__conversions.html#ga397ae87e1288a81d2363b61574eb8cab) ：将图像从一个颜色空间转换为另一个颜色空间
 * [`cv.inRange(src, lowerb, upperb[, dst])`](https://docs.opencv.org/3.4.5/d2/de8/group__core__array.html#ga48af0ab51e36436c5d04340e036ce981)  ：检查数组元素是否位于其他两个数组的元素之间
 * [`cv.bitwise_and(src1, src2[, dst[, mask]])`](https://docs.opencv.org/3.4.5/d2/de8/group__core__array.html#ga60b4d04b251ba5eb1392c34425497e14) ：计算两个数组的位联合（dst=src1&src2）
+
+
 
 > 原文地址：https://docs.opencv.org/3.4.5/df/d9d/tutorial_py_colorspaces.html
