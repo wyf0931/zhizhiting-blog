@@ -6,7 +6,7 @@ tags:
 categories: []
 date: 2019-07-15 16:23:00
 ---
-本文介绍如何通过 opencv 来修改图像的色彩空间，比如：*BGR ↔ Gray*, *BGR ↔ HSV*
+本文介绍如何通过 opencv 来修改图像的色彩空间，比如：*BGR ↔ Gray,  BGR ↔ HSV*
 <!--more-->
 
 OpenCV 中有 150 多种颜色空间转换方法，但我们将只介绍两种使用最多的：*BGR↔Gray* 和 *BGR↔HSV*。

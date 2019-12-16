@@ -13,10 +13,12 @@ JVM 为垃圾收集器、堆大小和运行时编译器提供了依赖于平台�
 
 ### 垃圾收集器、堆和运行时编译器默认选项
 服务器级机器定义：
+
 * 2核以上的物理处理器；
 * 2GB 以上的物理内存；
 
 服务器级机器上的默认选项：
+
 * Throughput 垃圾收集器；
 * 初始堆大小为 1/64 的物理内存（上限 1GB）；
 * 最大堆大小为 1/4 的物理内存（上限 1GB）；
@@ -24,9 +26,7 @@ JVM 为垃圾收集器、堆大小和运行时编译器提供了依赖于平台�
 
 有关 64 位系统的初始堆和最大堆大小，请参考[并行收集器（Parallel Collector）](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html#CHDCFBIF)中的[默认堆大小](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html#default_heap_size)一节。
 
-{%note info%}
-服务器级机器的定义适用于除 32 位 Windows 系统之外的所有平台。
-{%endnote%}
+> 服务器级机器的定义适用于除 32 位 Windows 系统之外的所有平台。
 
 下表展示了各平台默认的运行时编译器模式：
 
@@ -38,11 +38,9 @@ JVM 为垃圾收集器、堆大小和运行时编译器提供了依赖于平台�
 |AMD (64-bit)|Linux|Server|Server<sup>F3</sup>|
 |AMD (64-bit)|Windows|Server|Server<sup>F3</sup>|
 
-{%note%}
-<sup>F1</sup>：Client 表示采用 Client 运行时编译器，Server 表示采用 Server 运行时编译器；
-<sup>F2</sup>：基于历史统计，Windows 32 位平台上大部分都是客户端应用，因此即使是服务器级的机器，也会默认采用 Client 运行时编译器；
-<sup>F3</sup>：只支持 Server 运行时编译器；
-{%endnote%}
+> <sup>F1</sup>：Client 表示采用 Client 运行时编译器，Server 表示采用 Server 运行时编译器；
+> <sup>F2</sup>：基于历史统计，Windows 32 位平台上大部分都是客户端应用，因此即使是服务器级的机器，也会默认采用 Client 运行时编译器；
+> <sup>F3</sup>：只支持 Server 运行时编译器；
 
 ### 基于行为的调优
 对于并行收集器，Java SE 提供了两个基于实现应用程序的特定行为的垃圾收集调整参数：最大暂停时间和吞吐量指标；请参阅 [并行收集器](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html#CHDCFBIF) 部分。（这两个选项在其他收集器中不可用。）这些指标不一定都能符合。程序需要足够大的堆，至少保存所有的实时数据。此外，最小堆大小可能会阻碍这些期望目标。
@@ -55,9 +53,7 @@ JVM 为垃圾收集器、堆大小和运行时编译器提供了依赖于平台�
 ##### 吞吐量指标
 吞吐量指标是根据收集垃圾所花费的时间和垃圾收集之外的时间（称为应用程序时间）来衡量的，可以通过 `-XX：GCTimeRatio = <nnn>` 命令进行指定。垃圾收集时间与应用时间的比值为 `1 /(1 + <nnn>)`。例如，`-XX：GCTimeRatio = 19` 表示将垃圾回收总时间设定为 `1/20` 或 `5％` 。
 
-{%note%}
-垃圾回收耗时 = 年轻代回收耗时 + 老年代回收耗时
-{%endnote%}
+> 垃圾回收耗时 = 年轻代回收耗时 + 老年代回收耗时
 
 如果没有满足吞吐量指标，则通过增加代的大小来增加程序在所在区域内的运行时间。
 
@@ -71,6 +67,4 @@ JVM 为垃圾收集器、堆大小和运行时编译器提供了依赖于平台�
 4. 如果可以满足吞吐量，但暂停时间过长，则应设置最大暂停时间。设置最大暂停时间可能意味着不会达到吞吐量目标，那么可以设置一个可接受的折衷值。
 5. 通常，当垃圾收集器试图满足各项目标的平衡时，即使应用程序已达到稳定状态，堆的大小也会振荡。主要是为了实现目标吞吐量（可能需要更大的堆）的压力与目标最大暂停时间和目标最小占用量（这两者都可能需要小堆）的平衡。
 
-{%note%}
-原文地址：https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/ergonomics.html#ergonomics
-{%endnote%}
+> 原文地址：https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/ergonomics.html#ergonomics

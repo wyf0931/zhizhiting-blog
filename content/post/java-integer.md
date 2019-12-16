@@ -28,13 +28,11 @@ width: 10%;
 <!--more-->
 
 |类型|值范围|最小值|最大值|字节|
-|--|--|--|--|--|
+|---|---|---|---|---|
 |byte|[-2<sup>7</sup>, 2<sup>7</sup> -1]|-128|127|1|
 |short|[-2<sup>15</sup>, 2<sup>15</sup> -1]|-32768|32767|2|
 |int|[-2<sup>31</sup>, 2<sup>31</sup> -1]|-2147483648|2147483647|4|
 |long|[-2<sup>63</sup>, 2<sup>63</sup> -1]|-9223372036854775808|9223372036854775807|8|
 |char|[0, 2<sup>16</sup> -1]|0|65535|2|
 
-{% note %}
-原文地址：http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html
-{% endnote %}
+> 原文地址：http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html

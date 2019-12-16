@@ -39,6 +39,6 @@ width: 50%;
 |RuntimeMXBean|运行时系统|java.lang:type= Runtime|
 |ThreadMXBean|线程系统|java.lang:type= Threading|
 
-{%note%}
-原文地址：http://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html
-{%endnote%}
+
+
+> 原文地址：http://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html

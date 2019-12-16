@@ -82,17 +82,13 @@ for (Planet p : Planet.values()) {
 }
 ```
 
-{%note info%}
-由于 Java 语言不支持多继承（请参阅 [Multiple Inheritance of State, Implementation, and Type](http://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html)），只能继承一个父类（请参阅 [Declaring Classes](http://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)），而所有枚举隐式地继承了 `java.lang.Enum`，因此**枚举不能继承任何类**。
-{%endnote%}
+> 由于 Java 语言不支持多继承（请参阅 [Multiple Inheritance of State, Implementation, and Type](http://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html)），只能继承一个父类（请参阅 [Declaring Classes](http://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)），而所有枚举隐式地继承了 `java.lang.Enum`，因此**枚举不能继承任何类**。
 
 在下面的例子中，`Planet` 是一个枚举类型，表示太阳系中的行星。它们被定义为具有恒定的质量和半径属性。
 
 每个枚举常量都用质量和半径参数的值声明。这些值在创建常量时传递给构造函数。 **Java 要求在任何字段或方法之前首先定义常量。此外，当有字段和方法时，枚举常量的列表必须以分号结尾。**
 
-{%note info%}  
-枚举类型的构造函数必须是 `package-private` 或 `private` 类型。它自动创建在枚举体开始的地方定义常量。你不能自己调用枚举构造函数。
-{%endnote%}
+> 枚举类型的构造函数必须是 `package-private` 或 `private` 类型。它自动创建在枚举体开始的地方定义常量。你不能自己调用枚举构造函数。
 
 除了它的属性和构造函数，`Planet` 具有允许你检索每个行星上的对象的表面重力和重量的方法。这里是一个示例程序来获取你在地球的重量（任意单位），并计算和打印你在所有的行星的重量（单位相同）：
 
@@ -151,6 +147,4 @@ Your weight on URANUS is 158.397260
 Your weight on NEPTUNE is 199.207413
 ```
 
-{%note%}
-原文地址：http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
-{%endnote%}
+> 原文地址：http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html

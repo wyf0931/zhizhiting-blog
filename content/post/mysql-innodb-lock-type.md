@@ -8,7 +8,9 @@ tags:
 categories: []
 date: 2019-07-03 12:24:00
 ---
+
 本节介绍 InnoDB 的锁类型：
+
 *   [共享和排他锁（Shared and Exclusive Locks）](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-locking.html#innodb-shared-exclusive-locks "Shared and Exclusive Locks")
 *   [意向锁（Intention Locks）](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-locking.html#innodb-intention-locks "Intention Locks")
 *   [记录锁（Record Locks）](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-locking.html#innodb-record-locks "Record Locks")
@@ -18,9 +20,9 @@ date: 2019-07-03 12:24:00
 *   [Next-Key Locks](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-locking.html#innodb-next-key-locks "Next-Key Locks")
 
 ## 共享和排他锁（Shared and Exclusive Locks）
-InnoDB 实现了标准的行级锁，分为两种类型：[共享（*`S`*）锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_shared_lock) 和 [排他（*`X`*）锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_exclusive_lock)。
-* [共享(*`S`*) 锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_shared_lock "shared lock")允许持有该锁的事务读取行。
-* [排他(*`X`*) 锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_exclusive_lock "exclusive lock") 允许持有该锁的事务更新或删除行。
+InnoDB 实现了标准的行级锁，分为两种类型：[共享（`S`）锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_shared_lock) 和 [排他（`X`）锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_exclusive_lock)。
+* [共享(`S`) 锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_shared_lock "shared lock")允许持有该锁的事务读取行。
+* [排他(`X`) 锁](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/glossary.html#glos_exclusive_lock "exclusive lock") 允许持有该锁的事务更新或删除行。
 
 如果事务T1在行 r 上持有共享（S）锁，则其他事务T2对行 r 的锁的请求按如下方式处理：
 * 可以立即授予T2对S锁的请求。 结果，T1和T2都在r上持有S锁。
@@ -128,12 +130,12 @@ Record lock, heap no 2 PHYSICAL RECORD: n_fields 3; compact format; info bits 0
 待翻译
 
 ## AUTO-INC Locks
-*AUTO-INC 锁是由插入到具有 `AUTO_INCREMENT` 列的表中的事务所采用的特殊表级锁*。在最简单的情况下，如果一个事务正在向表中插入值，则任何其他事务必须等待对该表执行自己的插入，以便第一个事务插入的行接收连续的主键值。
+*AUTO-INC* 锁是由插入到具有 `AUTO_INCREMENT` 列的表中的事务所采用的特殊表级锁*。在最简单的情况下，如果一个事务正在向表中插入值，则任何其他事务必须等待对该表执行自己的插入，以便第一个事务插入的行接收连续的主键值。
 
 可以通过配置项 [`innodb_autoinc_lock_mode`](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-parameters.html#sysvar_innodb_autoinc_lock_mode) 调整自增锁算法，例如：调整自增序列和插入操作的最大并发。
 
 请参考：[Section 14.11.1.5, “AUTO_INCREMENT Handling in InnoDB”](https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-auto-increment-handling.html "14.11.1.5 AUTO_INCREMENT Handling in InnoDB").
 
-{%note%}
-原文地址：https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-locking.html
-{%endnote%}
+
+
+> 原文 地址：https://docs.oracle.com/cd/E17952_01/mysql-5.5-en/innodb-locking.html
