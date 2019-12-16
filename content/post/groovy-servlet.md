@@ -59,7 +59,7 @@ session.counter = session.counter + 1
 以下变量可以在 Groovlet 中直接使用：
 
 |变量名|	绑定	|备注|
-|-|-|-|
+|---|---|---|
 |request|ServletRequest|-|
 |response|ServletResponse|-|
 |context|ServletContext|-|
