@@ -29,6 +29,7 @@ AMQP 与其他中间件标准的不同之处主要有：
 * 可以利用 Web Service 标准提供业务契约表示。
 
 > 名词解释：
+> 
 > 1. SOA ：Service Oriented Architecture，面向服务的架构
-> 2. Expected Message Exchange Patterns ：预期的消息交换模式
+> 2. Expected Message Exchange Patterns ：预期的消息交换模式 
 > 3. SOAP ：Simple Object Access Protocol，简单对象访问协议
