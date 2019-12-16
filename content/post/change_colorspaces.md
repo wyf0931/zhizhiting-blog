@@ -9,9 +9,9 @@ date: 2019-07-15 16:23:00
 本文介绍如何通过 opencv 来修改图像的色彩空间，比如：*BGR ↔ Gray,  BGR ↔ HSV*
 <!--more-->
 
-OpenCV 中有 150 多种颜色空间转换方法，但我们将只介绍两种使用最多的：*BGR↔Gray* 和 *BGR↔HSV*。
+OpenCV 中有 150 多种颜色空间转换方法，但我们将只介绍两种使用最多的：*BGR↔Gray 和  BGR↔HSV*。
 
-我们用 ` cv.cvtColor(src, code)` 来转换颜色空间，其中 code 为要转换的类型。例如，BGR → Gray 时，`code` 为 [`cv.COLOR_BGR2GRAY`](https://docs.opencv.org/3.4.5/d8/d01/group__imgproc__color__conversions.html#gga4e0972be5de079fed4e3a10e24ef5ef0a353a4b8db9040165db4dacb5bcefb6ea)。同理，*BGR → HSV* 时，`code` 为 [`cv.COLOR_BGR2HSV`](https://docs.opencv.org/3.4.5/d8/d01/group__imgproc__color__conversions.html#gga4e0972be5de079fed4e3a10e24ef5ef0aa4a7f0ecf2e94150699e48c79139ee12)。可以用以下 Python 代码获取其他类型值：
+我们用 `cv.cvtColor(src, code)` 来转换颜色空间，其中 code 为要转换的类型。例如，BGR → Gray 时，`code` 为 [`cv.COLOR_BGR2GRAY`](https://docs.opencv.org/3.4.5/d8/d01/group__imgproc__color__conversions.html#gga4e0972be5de079fed4e3a10e24ef5ef0a353a4b8db9040165db4dacb5bcefb6ea)。同理，*BGR → HSV* 时，`code` 为 [`cv.COLOR_BGR2HSV`](https://docs.opencv.org/3.4.5/d8/d01/group__imgproc__color__conversions.html#gga4e0972be5de079fed4e3a10e24ef5ef0aa4a7f0ecf2e94150699e48c79139ee12)。可以用以下 Python 代码获取其他类型值：
 ```python
 import cv2 as cv
 
