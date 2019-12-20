@@ -35,6 +35,6 @@ Java 线程生命周期是什么呢？在不同阶段又有什么含义呢？
 线程已经运行结束，处于中止状态， `run()` 方法已经退出。
 
 下面这幅图表述的是各个阶段的转换过程：
-![Java 线程状态流转.png](http://upload-images.jianshu.io/upload_images/1247999-1a6c9e0b8d35bf6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Java 线程状态流转.png](/images/java-thread-life-cycle.webp)
 
 [阅读英文原文](http://www.techbeamers.com/java-multithreading-with-examples/)
