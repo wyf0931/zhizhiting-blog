@@ -39,7 +39,7 @@ menu:
     - name: 关于
       weight: 40
       identifier: about
-      url: /about
+      url: about
 params:
   version: 4.x
   debug: false
