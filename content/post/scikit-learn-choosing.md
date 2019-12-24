@@ -15,6 +15,7 @@ date: 2019-07-11 17:11:00
 从 `START` 开始，首先看数据的样本是否大于 `50`，小于则需要收集更多的数据。
 
 由图中可以看到，有四类算法：
+
 * 分类（Classification）
 * 回归（Regression）
 * 聚类（Clustering）
