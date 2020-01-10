@@ -39,13 +39,13 @@ menu:
     - name: 关于
       weight: 40
       identifier: about
-      url: about
+      url: /about
 params:
   version: 4.x
   debug: false
   since: '2018'
   gitRepo: ''
-  logoTitle: 行百里者半九十
+  logoTitle:自省
   keywords:
     - Java
     - 分布式
