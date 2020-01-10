@@ -45,7 +45,7 @@ params:
   debug: false
   since: '2018'
   gitRepo: ''
-  logoTitle:自省
+  logoTitle: 自省
   keywords:
     - Java
     - 分布式
