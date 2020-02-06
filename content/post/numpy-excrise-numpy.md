@@ -1,23 +1,24 @@
 ---
-title: 101 个 NumPy 数据分析练习
+title: "101 个 NumPy 数据分析练习（1～20）"
 author: Scott
 tags:
   - Python
   - Numpy
-date: 2020-02-06 19:05:05
+categories: []
+date: 2020-02-06T20:33:20+08:00
+draft: false
 ---
 
 此练习的目的是灵活应用 Numpy，成为一种参考。**练习题分为4个难度级别，其中 L1 最容易，L4 最困难。**
-
 <!--more-->
-
 Numpy 教程第2部分：数据分析的重要功能。 如果您想快速了解 numpy，最好使用以下教程：
+
 * [Numpy Tutorial Part 1: Introduction](https://www.machinelearningplus.com/numpy-tutorial-part1-array-python-examples)
 * [Numpy Tutorial Part 2: Advanced numpy tutorials](https://www.machinelearningplus.com/numpy-tutorial-python-part2)
 
 
 
-## L1
+## 难度级别：L1
 1. 将 `numpy` 导入为 `np` 并查看版本
 ```python
 import numpy as np
@@ -94,7 +95,7 @@ arr.reshape(2, -1)  # Setting to -1 automatically decides the number of cols
 
 
 
-## L2
+## 难度级别：L2
 
 1. 如何在不影响原始数组的情况下替换满足条件的元素？
 
@@ -363,13 +364,6 @@ print(rand_arr)
 
 https://www.machinelearningplus.com/python/101-numpy-exercises-python/
 
-
-
 相关文章：
 
 * [101 Practice exercises with pandas](https://www.machinelearningplus.com/python/101-pandas-exercises-python/)
-
-
-```
-
-```
